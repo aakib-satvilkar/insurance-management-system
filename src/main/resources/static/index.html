@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sawai Associates | Insurance Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <div class="brand">
+        <span class="brand-mark">SA</span>
+        <div>
+            <h1>Sawai Associates</h1>
+            <p>Insurance Management System</p>
+        </div>
+    </div>
+
+    <div class="role-switch">
+        <label for="roleSelect">Sign in as</label>
+        <select id="roleSelect">
+            <option value="admin-9f3a7c2e-token">ADMIN</option>
+            <option value="agent-4b1d8e6f-token">AGENT</option>
+        </select>
+        <span id="roleBadge" class="badge">ADMIN</span>
+    </div>
+</header>
+
+<nav class="tabs">
+    <button class="tab-btn active" data-tab="customers">Customers</button>
+    <button class="tab-btn" data-tab="policies">Policies</button>
+    <button class="tab-btn" data-tab="leads">Leads</button>
+</nav>
+
+<main>
+    <div id="toast" class="toast"></div>
+
+    <!-- ===================== CUSTOMERS ===================== -->
+    <section id="customers" class="tab-panel active">
+        <div class="panel-header">
+            <h2>Customers</h2>
+            <input type="text" id="customerSearch" placeholder="Search by name...">
+            <button class="btn-primary" onclick="openCustomerForm()">+ New Customer</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>DOB</th><th>Status</th><th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="customerTableBody"></tbody>
+        </table>
+    </section>
+
+    <!-- ===================== POLICIES ===================== -->
+    <section id="policies" class="tab-panel">
+        <div class="panel-header">
+            <h2>Insurance Policies</h2>
+            <button class="btn-primary" onclick="openPolicyForm()">+ New Policy</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>Policy #</th><th>Name</th><th>Type</th><th>Premium</th><th>Term</th><th>Start Date</th><th>Customer</th><th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="policyTableBody"></tbody>
+        </table>
+    </section>
+
+    <!-- ===================== LEADS ===================== -->
+    <section id="leads" class="tab-panel">
+        <div class="panel-header">
+            <h2>Lead Pipeline</h2>
+            <button class="btn-primary" onclick="openLeadForm()">+ New Lead</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>Prospect</th><th>Contact</th><th>Source</th><th>Status</th><th>Agent</th><th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="leadTableBody"></tbody>
+        </table>
+    </section>
+</main>
+
+<!-- ===================== MODAL ===================== -->
+<div id="modalOverlay" class="modal-overlay">
+    <div class="modal">
+        <h3 id="modalTitle">Form</h3>
+        <form id="modalForm"></form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

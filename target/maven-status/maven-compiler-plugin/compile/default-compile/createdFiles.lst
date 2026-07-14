@@ -1,0 +1,15 @@
+com\sawai\insurance\config\AuthInterceptor.class
+com\sawai\insurance\controller\PolicyController.class
+com\sawai\insurance\repository\PolicyRepository.class
+com\sawai\insurance\config\WebConfig.class
+com\sawai\insurance\InsuranceManagementSystemApplication.class
+com\sawai\insurance\entity\Policy.class
+com\sawai\insurance\controller\PolicyController$PolicyRequest.class
+com\sawai\insurance\repository\LeadRepository.class
+com\sawai\insurance\entity\Customer.class
+com\sawai\insurance\controller\LeadController.class
+com\sawai\insurance\exception\GlobalExceptionHandler.class
+com\sawai\insurance\exception\ResourceNotFoundException.class
+com\sawai\insurance\repository\CustomerRepository.class
+com\sawai\insurance\entity\Lead.class
+com\sawai\insurance\controller\CustomerController.class
